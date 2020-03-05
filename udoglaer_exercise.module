@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Code for the udoglar exercise feature.
+ */
+
+include_once 'udoglaer_exercise.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function udoglaer_exercise_form_exercise_node_form_alter(&$form, $form_state) {
+  $path = drupal_get_path('module', 'udoglaer_exercise');
+  $form['#attached']['js'][] = $path . '/assets/js/udoglaer-exercise-form-mods.js';
+  $form['intro_information']['#weight'] = -10;
+  $form['intro_information']['#markup'] = '<div class="messages status">';
+  ulf_forms_set_intro_text($form, $form_state);
+  $form['intro_information']['#markup'] .= '</div>';
+  $form['#prefix'] = '<div class="node--form is-default-form">';
+  $form['#suffix'] = '</div>';
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function udoglaer_exercise_preprocess_node(&$variables) {
+  $variables['view__target_group_sub'] = module_invoke(
+    'views',
+    'block_view',
+    'udoglaer_course_target_groups-block_1'
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function udoglaer_exercise_theme($existing, $type, $theme, $path) {
+  return array(
+    'node__exercise' => array(
+      'path' => drupal_get_path('module', 'udoglaer_exercise') .'/templates',
+      'template' => 'node--exercise',
+    ),
+  );
+}

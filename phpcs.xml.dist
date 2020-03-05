@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="loop">
+  <description>PHP CodeSniffer configuration</description>
+
+  <file>udoglaer_exercise.info</file>
+  <file>udoglaer_exercise.module</file>
+
+  <!-- Show progress -->
+  <arg value="p"/>
+
+  <rule ref="Drupal">
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+  </rule>
+</ruleset>
