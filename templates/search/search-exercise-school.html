@@ -36,7 +36,7 @@
               <div class="search--filter-dropdown-header" data-ng-click="openFilter('field_target_group_sub')">{{ filters.taxonomy.field_target_group_sub.name }} <span class="search--filter-dropdown-header-close"><img src="/profiles/ulf/themes/ulf_default/images/close.svg"></span>
               </div>
               <div class="search--filter-dropdown-content">
-                <div data-ng-repeat="key in ['Børn og unge med særlige behov', '0 år', '1 år', '2 år', '3 år', '4 år', '5 år', '6 år']">
+                <div data-ng-repeat="key in ['Børn og unge med særlige behov', 'Modtageklasser', '0. klasse', '1. klasse', '2. klasse', '3. klasse', '4. klasse', '5. klasse', '6. klasse', '7. klasse', '8. klasse', '9. klasse','10. klasse']">
                   <input id="{{ key }}" data-ng-disabled="!filters.taxonomy.field_target_group_sub.items[key].count"
                          data-ng-click="searchClicked()" type="checkbox"
                          data-ng-model="query.filters.taxonomy.field_target_group_sub[key]">
