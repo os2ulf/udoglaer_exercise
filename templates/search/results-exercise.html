@@ -1,0 +1,36 @@
+<!-- Number of hits -->
+<div data-ng-if="hits.hits && !displayMap" class="search-results-header">
+  <h2><strong>{{ hits.hits }}</strong> resultater</h2>
+</div>
+
+<!-- Normal result display -->
+<span data-ng-if="!displayMap">
+  <div class="search-results">
+    <article class="search-results--result" data-ng-repeat="hit in hits.results">
+      <header>
+        <h2 class="search-results--header">
+          <a href="{{ hit.url }}">{{ hit.title }}</a>
+        </h2>
+        <p class="teaser--type">Varighed: {{ hit['field_duration_select'][0] }}</p>
+        <p class="search-results--type">
+          <p data-ng-bind-html="hit['field_full_description:value'] | trimWordBoundary:100"></p>
+        </p>
+        <p class="teaser--type-read-more"><a href="{{ hit.url }}">Se hele forløbet</a></p>
+      </header>
+      <figure><a href="{{ hit.url }}"><img data-ng-src="{{ hit['field_image:file'].url }}" src="#"/></a></figure>
+    </article>
+
+    <!-- No results -->
+    <div class="no-results" data-ng-if="!hits.hits && !searching">
+      Beklager, vi fandt intet indhold. Prøv evt. at søge igen.
+    </div>
+
+    <!-- Searching spinner -->
+    <div class="search-spinner" data-ng-if="searching">
+      <img src="/profiles/ulf/themes/ulf_default/images/spinner.gif" />
+    </div>
+
+    <!-- Search pager if the provider supports it -->
+    <search-pager></search-pager>
+  </div>
+</span>
