@@ -36,10 +36,15 @@ function udoglaer_exercise_preprocess_node(&$variables) {
  * Implements hook_theme().
  */
 function udoglaer_exercise_theme($existing, $type, $theme, $path) {
+  $template_path = drupal_get_path('module', 'udoglaer_exercise') .'/templates';
   return array(
     'node__exercise' => array(
-      'path' => drupal_get_path('module', 'udoglaer_exercise') .'/templates',
+      'path' => $template_path,
       'template' => 'node--exercise',
+    ),
+    'field__field_educational_material__exercise' => array(
+      'path' => $template_path,
+      'template' => 'field--field-educational-material--exercise',
     ),
   );
 }
