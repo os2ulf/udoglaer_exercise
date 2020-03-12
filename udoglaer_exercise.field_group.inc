@@ -242,7 +242,9 @@ function udoglaer_exercise_field_group_info() {
   $field_group->data = array(
     'label' => 'Besøgssteder',
     'weight' => '7',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_related_user',
+    ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Besøgssteder',
