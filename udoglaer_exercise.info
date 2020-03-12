@@ -46,6 +46,7 @@ features[field_instance][] = node-exercise-field_period_select
 features[field_instance][] = node-exercise-field_post_work
 features[field_instance][] = node-exercise-field_purpose
 features[field_instance][] = node-exercise-field_related_content
+features[field_instance][] = node-exercise-field_related_user
 features[field_instance][] = node-exercise-field_subject
 features[field_instance][] = node-exercise-field_target_group
 features[field_instance][] = node-exercise-field_target_group_sub

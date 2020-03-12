@@ -636,6 +636,46 @@ function udoglaer_exercise_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exercise-field_related_user'.
+  $field_instances['node-exercise-field_related_user'] = array(
+    'bundle' => 'exercise',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_user',
+    'label' => 'Besøgssteder',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 48,
+    ),
+  );
+
   // Exported field_instance: 'node-exercise-field_subject'.
   $field_instances['node-exercise-field_subject'] = array(
     'bundle' => 'exercise',
@@ -805,6 +845,7 @@ function udoglaer_exercise_field_default_field_instances() {
   t('Angiv URLen på en Youtube eller Vimeo video');
   t('Arbejdsark');
   t('Beskrivelse til varighed');
+  t('Besøgssteder');
   t('Efter besøget');
   t('Emneområde');
   t('Er der arbejdsark tilknyttet opgaven? Her kan du uploade materialet');
