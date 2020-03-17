@@ -53,11 +53,10 @@ function udoglaer_exercise_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_node_access().
  *
- * Enforces our access rules for custom workflow target content to force updates
- * only if the user is targeted in the user select field
+ * Enforces our access rules for target content to allow all related users
+ * to edit content.
  */
 function udoglaer_exercise_node_access($node, $op, $account) {
-  $a =1;
   // If a node is being updated
   if ($op == 'update') {
     // If the user select field exists on this node

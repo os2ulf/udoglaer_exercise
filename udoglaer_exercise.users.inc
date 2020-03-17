@@ -24,6 +24,14 @@ function udoglaer_exercise_secure_permissions($role) {
       'access toolbar',
       'use text format editor'
     ),
+    'course provider' => array(
+      'create exercise content'
+    ),
+    'editor' => array(
+      'create exercise content',
+      'edit own exercise content',
+      'edit any exercise content'
+    )
   );
 
   return isset($permissions[$role]) ? $permissions[$role] : NULL;
