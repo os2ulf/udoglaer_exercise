@@ -3,6 +3,14 @@
 ## UdogLaer project relation
 - Optional module
 
+## Installation
+- Enable module
+- Set template location in settings.php
+- Empty cache
+- Rebuild secure permissions
+- Import search index config defined in assets.
+- Add "lejrskole" to user filter in search api config for user index.
+
 ## Description
 - Adds exercise content type and related functionality
 - assets/search-index-definition.json holds index configuration for
