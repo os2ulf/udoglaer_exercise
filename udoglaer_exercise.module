@@ -6,6 +6,7 @@
  */
 
 include_once 'udoglaer_exercise.features.inc';
+include_once 'udoglaer_exercise.users.inc';
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -36,10 +37,42 @@ function udoglaer_exercise_preprocess_node(&$variables) {
  * Implements hook_theme().
  */
 function udoglaer_exercise_theme($existing, $type, $theme, $path) {
+  $template_path = drupal_get_path('module', 'udoglaer_exercise') .'/templates';
   return array(
     'node__exercise' => array(
-      'path' => drupal_get_path('module', 'udoglaer_exercise') .'/templates',
+      'path' => $template_path,
       'template' => 'node--exercise',
     ),
+    'field__field_educational_material__exercise' => array(
+      'path' => $template_path,
+      'template' => 'field--field-educational-material--exercise',
+    ),
   );
+}
+
+/**
+ * Implements hook_node_access().
+ *
+ * Enforces our access rules for target content to allow all related users
+ * to edit content.
+ */
+function udoglaer_exercise_node_access($node, $op, $account) {
+  // If a node is being updated
+  if ($op == 'update') {
+    // If the user select field exists on this node
+    if (isset($node->field_related_user)) {
+      // If the user select field is not empty
+      if (!empty($node->field_related_user)) {
+        // If the user id in the user select field does not match the current user
+        foreach ($node->field_related_user[LANGUAGE_NONE] as $allowed_users) {
+          if ($allowed_users['target_id'] == $account->uid) {
+            // The user is related so we allow access
+            return NODE_ACCESS_ALLOW;
+          }
+        }
+      }
+    }
+  }
+  // Else ignore altering access
+  return NODE_ACCESS_IGNORE;
 }

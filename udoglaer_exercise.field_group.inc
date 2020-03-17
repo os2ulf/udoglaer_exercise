@@ -54,11 +54,11 @@ function udoglaer_exercise_field_group_info() {
     'label' => 'Aktiviteter, forberedelse og efterbehandling',
     'weight' => '1',
     'children' => array(
-      0 => 'field_how_to',
-      1 => 'field_related_content',
-      2 => 'field_background_knowledge',
-      3 => 'field_post_work',
-      4 => 'field_activities',
+      0 => 'field_activities',
+      1 => 'field_background_knowledge',
+      2 => 'field_post_work',
+      3 => 'field_how_to',
+      4 => 'field_related_content',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -87,9 +87,9 @@ function udoglaer_exercise_field_group_info() {
     'label' => 'Opgaven',
     'weight' => '0',
     'children' => array(
-      0 => 'field_target_group',
-      1 => 'field_full_description',
-      2 => 'field_purpose',
+      0 => 'field_full_description',
+      1 => 'field_purpose',
+      2 => 'field_target_group',
       3 => 'title',
     ),
     'format_type' => 'div',
@@ -211,9 +211,9 @@ function udoglaer_exercise_field_group_info() {
     'label' => 'Praktisk information',
     'weight' => '2',
     'children' => array(
-      0 => 'field_subject',
-      1 => 'field_target_group_sub',
-      2 => 'field_educational_goals',
+      0 => 'field_educational_goals',
+      1 => 'field_subject',
+      2 => 'field_target_group_sub',
       3 => 'field_activity_select',
     ),
     'format_type' => 'fieldset',
@@ -243,7 +243,7 @@ function udoglaer_exercise_field_group_info() {
     'label' => 'Besøgssteder',
     'weight' => '7',
     'children' => array(
-      0 => 'field_related_users',
+      0 => 'field_related_user',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

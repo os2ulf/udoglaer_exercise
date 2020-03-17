@@ -1,0 +1,144 @@
+{
+  "ba97aaba3a3e5fbc844bbb49335397af": {
+    "name": "ULF Exercises",
+    "fields": [
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": true,
+        "indexable": true,
+        "raw": false,
+        "geopoint": false,
+        "field": "title",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_educational_goals",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_subject",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_target_group",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_target_group_sub",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "object",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": false,
+        "raw": false,
+        "geopoint": false,
+        "field": "field_image:file",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "sort": false,
+        "indexable": false,
+        "raw": false,
+        "geopoint": false,
+        "field": "url",
+        "default_indexer": "analyzed"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "default_indexer": "analyzed",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_activity_select"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "default_indexer": "analyzed",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_duration_select"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "default_indexer": "analyzed",
+        "sort": false,
+        "indexable": true,
+        "raw": true,
+        "geopoint": false,
+        "field": "field_period_select"
+      },
+      {
+        "type": "string",
+        "country": "DK",
+        "language": "da",
+        "default_analyzer": "string_index",
+        "default_indexer": "analyzed",
+        "sort": false,
+        "indexable": true,
+        "raw": false,
+        "geopoint": false,
+        "field": "field_full_description"
+      }
+    ],
+    "dates": [
+      "created",
+      "changed"
+    ],
+    "tag": "private"
+  }
+}

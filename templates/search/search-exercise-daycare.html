@@ -1,0 +1,88 @@
+<div class="search--widget is-daycare">
+  <div class="search--widget-inner">
+
+    <div id={{id}} data-ng-class="toggleFilterClasses[id][0]" class="search--filter-wrapper"
+         data-ng-repeat="id in ['field_subject', 'field_period_select', 'field_activity_select', 'field_educational_goals', 'field_duration_select']">
+      <div class="search--filter-wrapper-inner">
+        <div class="search--filter-list">
+          <div class="search--filter-label" data-ng-click="openFilter(id)">{{ filters.taxonomy[id].name }}</div>
+          <div class="search--filter-dropdown" data-ng-class="toggleFilterClasses[id][1]">
+            <div class="search--filter-dropdown-inner">
+              <div class="search--filter-dropdown-header" data-ng-click="openFilter(id)">{{ filters.taxonomy[id].name }} <span class="search--filter-dropdown-header-close"><img src="/profiles/ulf/themes/ulf_default/images/close.svg"></span>
+              </div>
+              <div class="search--filter-dropdown-content">
+                <div data-ng-repeat="(key, item) in filters.taxonomy[id].items">
+                  <input id="{{ key }}" data-ng-disabled="!item.count"
+                         data-ng-click="searchClicked()" type="checkbox"
+                         data-ng-model="query.filters.taxonomy[id][key]">
+                  <label data-ng-class="{ disabled: !item.count }"
+                         for="{{ key }}">{{ item.value }}</label>
+                </div>
+              </div>
+              <div class="search--filter-dropdown-submit" data-ng-click="openFilter(id)">Anvend</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- field_target_group_sub -->
+    <div id="field_target_group_sub" data-ng-class="toggleFilterClasses.field_target_group_sub[0]" class="search--filter-wrapper">
+      <div class="search--filter-wrapper-inner">
+        <div class="search--filter-list">
+          <div class="search--filter-label" data-ng-click="openFilter('field_target_group_sub')">{{ filters.taxonomy.field_target_group_sub.name }}</div>
+          <div class="search--filter-dropdown" data-ng-class="toggleFilterClasses.field_target_group_sub[1]">
+            <div class="search--filter-dropdown-inner">
+              <div class="search--filter-dropdown-header" data-ng-click="openFilter('field_target_group_sub')">{{ filters.taxonomy.field_target_group_sub.name }} <span class="search--filter-dropdown-header-close"><img src="/profiles/ulf/themes/ulf_default/images/close.svg"></span>
+              </div>
+              <div class="search--filter-dropdown-content">
+                <div data-ng-repeat="key in ['Børn og unge med særlige behov', '0 år', '1 år', '2 år', '3 år', '4 år', '5 år', '6 år']">
+                  <input id="{{ key }}" data-ng-disabled="!filters.taxonomy.field_target_group_sub.items[key].count"
+                         data-ng-click="searchClicked()" type="checkbox"
+                         data-ng-model="query.filters.taxonomy.field_target_group_sub[key]">
+                  <label data-ng-class="{ disabled: !filters.taxonomy.field_target_group_sub.items[key].count }"
+                         for="{{ key }}">{{ filters.taxonomy.field_target_group_sub.items[key].value }}</label>
+                </div>
+              <div class="search--filter-dropdown-submit" data-ng-click="openFilter('field_target_group_sub')">Anvend</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      - Search filters -- END
+      -->
+
+  </div>
+
+  <!-- Search field -->
+
+
+
+  <div class="search--widget-extras">
+    <div class="search--exercise">
+      <input type="text" id="search" name="search" value="" size="60"
+             maxlength="128" class="search--filter-search-text"
+             data-code="13" data-key-code="searchClicked()"
+             data-ng-model="query.text">
+      <input class="search--filter-search-submit" type="submit"
+             id="search-submit" name="search-submit" value="Søg"
+             data-ng-click="searchClicked()">
+    </div>
+    <div class="search--reset" data-ng-click="reset()">Nulstil søgning</div>
+  </div>
+
+  <!-- Selected filters -->
+  <div class="search--widget-selected">
+    <div class="search--widget-selected-inner">
+      <span data-ng-repeat="(field, filters) in selectedFilters" class="search--widget-selected-item-wrapper">
+        <span class="search--widget-selected-item"
+             data-ng-repeat="filter in filters"
+             data-ng-click="removeFilter(field, filter)">{{ filter }}
+        </span>
+      </span>
+    </div>
+
+  </div>
+</div>

@@ -66,7 +66,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 13,
       ),
       'teaser' => array(
@@ -191,7 +191,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 14,
       ),
       'teaser' => array(
@@ -228,7 +228,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -408,7 +408,7 @@ function udoglaer_exercise_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_image',
     'label' => 'Upload et billede/illustration',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -467,6 +467,48 @@ function udoglaer_exercise_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exercise-field_passed_review'.
+  $field_instances['node-exercise-field_passed_review'] = array(
+    'bundle' => 'exercise',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_passed_review',
+    'label' => 'Passed review',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 50,
+    ),
+  );
+
   // Exported field_instance: 'node-exercise-field_period_select'.
   $field_instances['node-exercise-field_period_select'] = array(
     'bundle' => 'exercise',
@@ -478,7 +520,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 15,
       ),
       'teaser' => array(
@@ -572,7 +614,7 @@ function udoglaer_exercise_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_purpose',
     'label' => 'Mål',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -636,6 +678,46 @@ function udoglaer_exercise_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exercise-field_related_user'.
+  $field_instances['node-exercise-field_related_user'] = array(
+    'bundle' => 'exercise',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => 0,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_user',
+    'label' => 'Besøgssteder',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 48,
+    ),
+  );
+
   // Exported field_instance: 'node-exercise-field_subject'.
   $field_instances['node-exercise-field_subject'] = array(
     'bundle' => 'exercise',
@@ -647,7 +729,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 7,
       ),
       'teaser' => array(
@@ -684,7 +766,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -725,7 +807,7 @@ function udoglaer_exercise_field_default_field_instances() {
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -747,6 +829,48 @@ function udoglaer_exercise_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'node-exercise-field_trashed'.
+  $field_instances['node-exercise-field_trashed'] = array(
+    'bundle' => 'exercise',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_trashed',
+    'label' => 'Trashed',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 52,
     ),
   );
 
@@ -805,6 +929,7 @@ function udoglaer_exercise_field_default_field_instances() {
   t('Angiv URLen på en Youtube eller Vimeo video');
   t('Arbejdsark');
   t('Beskrivelse til varighed');
+  t('Besøgssteder');
   t('Efter besøget');
   t('Emneområde');
   t('Er der arbejdsark tilknyttet opgaven? Her kan du uploade materialet');
@@ -815,8 +940,10 @@ function udoglaer_exercise_field_default_field_instances() {
   t('Målgruppe');
   t('Opgavebeskrivelse');
   t('Overordnet målgruppe');
+  t('Passed review');
   t('Periode');
   t('Sådan gør du');
+  t('Trashed');
   t('Under besøget');
   t('Upload et billede/illustration');
   t('Varighed');
