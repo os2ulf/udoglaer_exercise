@@ -56,8 +56,8 @@ function udoglaer_exercise_field_group_info() {
     'children' => array(
       0 => 'field_activities',
       1 => 'field_background_knowledge',
-      2 => 'field_post_work',
-      3 => 'field_how_to',
+      2 => 'field_how_to',
+      3 => 'field_post_work',
       4 => 'field_related_content',
     ),
     'format_type' => 'fieldset',
@@ -211,10 +211,12 @@ function udoglaer_exercise_field_group_info() {
     'label' => 'Praktisk information',
     'weight' => '2',
     'children' => array(
-      0 => 'field_educational_goals',
-      1 => 'field_subject',
-      2 => 'field_target_group_sub',
-      3 => 'field_activity_select',
+      0 => 'field_activity_select',
+      1 => 'field_educational_goals',
+      2 => 'field_subject',
+      3 => 'field_target_group_sub',
+      4 => 'field_subjects_primary_school',
+      5 => 'field_subjects_youth',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

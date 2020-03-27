@@ -144,17 +144,23 @@
                 <?php else : ?>
                   <?php print render($content['field_period_select']); ?>
                 <?php endif; ?>
-                <?php print render($content['field_duration_select']); ?>
-                <div class="block--field-text"><?php print render($content['field_duration_description']); ?></div>
               </div>
+                <div class="block--field-wrapper">
+                  <?php print render($content['field_duration_select']); ?>
+                  <div class="block--field-text"><?php print render($content['field_duration_description']); ?></div>
+                </div>
               <div class="block--field-wrapper">
                 <?php print render($content['field_subject']); ?>
               </div>
-              <?php if(!empty($field_educational_goals)) : ?>
-                <div class="block--field-wrapper">
-                  <?php print render($content['field_educational_goals']); ?>
-                </div>
-              <?php endif; ?>
+              <div class="block--field-wrapper">
+                <?php if ($field_educational_goals || $field_subjects_primary_school || $field_subjects_youth) : ?>
+                  <div class="block--field-wrapper">
+                    <?php print render($content['field_subjects_primary_school']); ?>
+                    <?php print render($content['field_subjects_youth']); ?>
+                    <?php print render($content['field_educational_goals']); ?>
+                  </div>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
           <?php if(!empty($field_related_users)) : ?>

@@ -52,9 +52,23 @@
       }
 
       /**
+       * Clear subjects and educational goals field field values.
+       */
+      function clearSubjectsValues(fieldValue) {
+        $('.field-name-field-' + fieldValue + ' input').prop("checked", false);
+      }
+
+      /**
        * Sets up available fields when Preschool is selected.
        */
       function selectionPreschool() {
+        $('#edit-field-educational-goals').show();
+        $('#edit-field-subjects-youth').hide();
+        $('#edit-field-subjects-primary-school').hide();
+
+        clearSubjectsValues('subjects-youth');
+        clearSubjectsValues('subjects-primary-school');
+
         // The sub target group field selection values.
         displayRelevantSubgroupByKeyword(function (text) {
           return text.indexOf('år') != -1 || text.indexOf('Børn og unge med særlige behov') != -1;
@@ -65,6 +79,13 @@
        * Sets up available fields when Primary School is selected.
        */
       function selectionPrimarySchool() {
+        $('#edit-field-educational-goals').hide();
+        $('#edit-field-subjects-youth').hide();
+        $('#edit-field-subjects-primary-school').show();
+
+        clearSubjectsValues('educational-goals');
+        clearSubjectsValues('subjects-youth');
+
         // The sub target group field selection values.
         displayRelevantSubgroupByKeyword(function (text) {
           return text.indexOf('klasse') != -1 || text.indexOf('DUS') != -1 || text.indexOf('Børn og unge med særlige behov') != -1;
@@ -75,6 +96,12 @@
        * Sets up available fields when Youth is selected.
        */
       function selectionYouth() {
+        $('#edit-field-educational-goals').hide();
+        $('#edit-field-subjects-primary-school').hide();
+        $('#edit-field-subjects-youth').show();
+
+        clearSubjectsValues('educational-goals');
+        clearSubjectsValues('subjects-primary-school');
         // The sub target group field selection values.
         displayRelevantSubgroupByKeyword(function (text) {
           return (text.indexOf('år') == -1 && text.indexOf('klasse') == -1 && text.indexOf('DUS') == -1);
