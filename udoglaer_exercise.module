@@ -29,7 +29,7 @@ function udoglaer_exercise_preprocess_node(&$variables) {
   $variables['view__target_group_sub'] = module_invoke(
     'views',
     'block_view',
-    'udoglaer_course_target_groups-block_1'
+    'ulf_course_target_groups-block_1'
   );
 }
 
