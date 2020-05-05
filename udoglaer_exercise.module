@@ -47,6 +47,10 @@ function udoglaer_exercise_theme($existing, $type, $theme, $path) {
       'path' => $template_path,
       'template' => 'field--field-educational-material--exercise',
     ),
+    'field__field_related_content__exercise' => array(
+      'path' => $template_path,
+      'template' => 'field--field-related-content--exercise',
+    ),
   );
 }
 

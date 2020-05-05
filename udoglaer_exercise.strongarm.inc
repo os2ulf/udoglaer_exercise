@@ -67,16 +67,19 @@ function udoglaer_exercise_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'locations' => array(
-          'weight' => '30',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '11',
+          'weight' => '10',
+        ),
+        'metatags' => array(
+          'weight' => '12',
         ),
       ),
       'display' => array(),

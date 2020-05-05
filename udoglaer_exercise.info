@@ -45,6 +45,7 @@ features[field_instance][] = node-exercise-field_full_description
 features[field_instance][] = node-exercise-field_how_to
 features[field_instance][] = node-exercise-field_image
 features[field_instance][] = node-exercise-field_passed_review
+features[field_instance][] = node-exercise-field_period_info
 features[field_instance][] = node-exercise-field_period_select
 features[field_instance][] = node-exercise-field_post_work
 features[field_instance][] = node-exercise-field_purpose
