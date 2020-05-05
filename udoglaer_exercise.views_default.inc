@@ -74,7 +74,7 @@ function udoglaer_exercise_views_default_views() {
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['value'] = array(
-    18 => '18',
+    6 => '6',
   );
 
   /* Display: Visiting sites */
@@ -106,7 +106,7 @@ function udoglaer_exercise_views_default_views() {
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
   $handler->display->display_options['filters']['rid']['value'] = array(
-    18 => '18',
+    3 => '3',
   );
   $translatables['udoglaer_visiting_sites_dropdowns_user'] = array(
     t('Master'),

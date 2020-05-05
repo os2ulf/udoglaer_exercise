@@ -505,7 +505,51 @@ function udoglaer_exercise_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 50,
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-exercise-field_period_info'.
+  $field_instances['node-exercise-field_period_info'] = array(
+    'bundle' => 'exercise',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_period_info',
+    'label' => 'Yderligere oplysninger til periode',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 45,
     ),
   );
 
@@ -514,7 +558,7 @@ function udoglaer_exercise_field_default_field_instances() {
     'bundle' => 'exercise',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Skal opgaven være gældende for \'Hele året\', så undlad at afkrydse nogen muligheder.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -944,7 +988,7 @@ function udoglaer_exercise_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 52,
+      'weight' => 14,
     ),
   );
 
@@ -956,7 +1000,7 @@ function udoglaer_exercise_field_default_field_instances() {
     'description' => 'Angiv URLen på en Youtube eller Vimeo video',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'video_embed_field',
         'settings' => array(
           'description' => 1,
@@ -1017,12 +1061,14 @@ function udoglaer_exercise_field_default_field_instances() {
   t('Overordnet målgruppe');
   t('Passed review');
   t('Periode');
+  t('Skal opgaven være gældende for \'Hele året\', så undlad at afkrydse nogen muligheder.');
   t('Sådan gør du');
   t('Trashed');
   t('Under besøget');
   t('Upload et billede/illustration');
   t('Varighed');
   t('Video');
+  t('Yderligere oplysninger til periode');
 
   return $field_instances;
 }
