@@ -30,7 +30,8 @@ function udoglaer_exercise_secure_permissions($role) {
     'editor' => array(
       'create exercise content',
       'edit own exercise content',
-      'edit any exercise content'
+      'edit any exercise content',
+      'assign lejrskole role'
     )
   );
 
