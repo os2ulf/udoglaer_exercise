@@ -65,6 +65,8 @@ function udoglaer_exercise_default_search_api_index() {
         "author" : { "type" : "integer", "entity_type" : "user" },
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
+        "field_activity_select" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_duration_select" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_educational_goals" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_educational_goals:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_educational_material" : {
@@ -73,6 +75,7 @@ function udoglaer_exercise_default_search_api_index() {
         },
         "field_full_description:value" : { "type" : "text" },
         "field_image:file" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "file" },
+        "field_period_select" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_subject" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_subject:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_target_group" : { "type" : "integer", "entity_type" : "taxonomy_term" },
