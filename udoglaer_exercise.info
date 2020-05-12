@@ -9,7 +9,6 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = image
-dependencies[] = node
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = search_api
