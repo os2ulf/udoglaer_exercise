@@ -704,7 +704,7 @@ function udoglaer_exercise_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_related_content',
-    'label' => 'Kan suppleres med opgaver',
+    'label' => 'Kan suppleres med følgende opgaver',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1049,7 +1049,7 @@ function udoglaer_exercise_field_default_field_instances() {
   t('Er der arbejdsark tilknyttet opgaven? Her kan du uploade materialet');
   t('Fag');
   t('Før besøget');
-  t('Kan suppleres med opgaver');
+  t('Kan suppleres med følgende opgaver');
   t('Læreplanstemaer');
   t('Mål');
   t('Målgruppe');
