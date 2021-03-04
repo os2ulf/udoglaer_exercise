@@ -121,7 +121,7 @@ function udoglaer_exercise_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Materialer',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_educational_material',
     ),
@@ -150,7 +150,7 @@ function udoglaer_exercise_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Billeder/medier',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_image',
       1 => 'field_video',
@@ -244,7 +244,7 @@ function udoglaer_exercise_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Besøgssteder',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'field_related_user',
     ),

@@ -76,6 +76,7 @@ function udoglaer_exercise_default_search_api_index() {
         "field_full_description:value" : { "type" : "text" },
         "field_image:file" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "file" },
         "field_period_select" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_related_user:field_profile_name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_subject" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_subject:name" : { "type" : "list\\u003Ctext\\u003E" },
         "field_subjects_primary_school" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
